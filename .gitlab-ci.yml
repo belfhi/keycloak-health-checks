@@ -6,3 +6,5 @@ deploy:
     - 'mvn deploy -s ci_settings.xml'
   only:
     - master
+  tags:
+    - kubernetes-executor
