@@ -11,7 +11,7 @@
     <properties>
         <!-- general settings -->
         <project.build.sourceEncoding>UTF-8</project.build.sourceEncoding>
-        <java.version>1.8</java.version>
+        <java.version>17</java.version>
         <maven.compiler.source>${java.version}</maven.compiler.source>
         <maven.compiler.target>${java.version}</maven.compiler.target>
 
@@ -20,9 +20,9 @@
 
         <keycloak.version>${env.KEYCLOAK_VERSION}</keycloak.version>
         <keycloak.versionedArtifactName>keycloak-${keycloak.version}</keycloak.versionedArtifactName>
-        <infinispan.version>14.0.21.Final</infinispan.version>
+        <infinispan.version>14.0.27.Final</infinispan.version>
         <cdi-api.version>2.0.2</cdi-api.version>
-        <quarkus.version>3.2.10.Final</quarkus.version>
+        <quarkus.version>3.8.3</quarkus.version>
     </properties>
 
 	<repositories>
