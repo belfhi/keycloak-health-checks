@@ -52,8 +52,7 @@ public class InfinispanHealthIndicator extends AbstractHealthIndicator {
                 .withAttribute("healthStatus", clusterHealth.getHealthStatus()) //
                 .withAttribute("numberOfNodes", clusterHealth.getNumberOfNodes()) //
                 .withAttribute("nodeNames", clusterHealth.getNodeNames())
-                .withAttribute("cacheDetails", detailedCacheHealthInfo)
-        ;
+                .withAttribute("cacheDetails", detailedCacheHealthInfo);
 
         return status;
     }
@@ -75,7 +74,7 @@ public class InfinispanHealthIndicator extends AbstractHealthIndicator {
         }
 
         // Manual lookup via Arc for Keycloak.X
-        return Arc.container().instance(CacheManagerFactory.class).get()
+        return Arc.container().instance(CacheManagerFactory.class).get().getOrCreateEmbeddedCacheManager();
     }
 
     protected KeycloakHealthStatus determineClusterHealth(ClusterHealth clusterHealth) {

@@ -17,7 +17,12 @@ public class KeycloakUtil {
         private static final boolean RUNNING_ON_KEYCLOAK;
 
         static {
-            RUNNING_ON_KEYCLOAK = KeycloakSessionUtil.getKeycloakSession().getProvider().getClass().getSimpleName().equals("Restesy3Provider");
+
+            final String PROVIDER_NAME;
+            RUNNING_ON_KEYCLOAK = KeycloakSessionUtil.getKeycloakSession().getClass().getSimpleName()
+                    .equals("Resteasy3Provider");
+            PROVIDER_NAME = KeycloakSessionUtil.getKeycloakSession().getClass().getSimpleName();
+            System.out.println(PROVIDER_NAME);
         }
     }
 }
