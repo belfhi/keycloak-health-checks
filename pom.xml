@@ -22,7 +22,7 @@
         <keycloak.versionedArtifactName>keycloak-${keycloak.version}</keycloak.versionedArtifactName>
         <infinispan.version>14.0.27.Final</infinispan.version>
         <cdi-api.version>2.0.2</cdi-api.version>
-        <quarkus.version>3.8.3</quarkus.version>
+        <quarkus.version>3.8.5</quarkus.version>
     </properties>
 
 	<repositories>
@@ -113,6 +113,14 @@
             <version>${quarkus.version}</version>
             <scope>provided</scope>
         </dependency>
+
+        <!-- https://mvnrepository.com/artifact/io.quarkus.resteasy.reactive/resteasy-reactive -->
+        <dependency>
+            <groupId>io.quarkus.resteasy.reactive</groupId>
+            <artifactId>resteasy-reactive</artifactId>
+            <version>${quarkus.version}</version>
+        </dependency>
+
 
         <dependency>
             <groupId>org.keycloak</groupId>
