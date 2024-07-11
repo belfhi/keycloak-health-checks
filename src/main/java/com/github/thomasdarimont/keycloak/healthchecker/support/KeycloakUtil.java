@@ -1,6 +1,6 @@
 package com.github.thomasdarimont.keycloak.healthchecker.support;
 
-import org.keycloak.common.util.Resteasy;
+import org.keycloak.utils.KeycloakSessionUtil;
 
 public class KeycloakUtil {
 
@@ -17,7 +17,7 @@ public class KeycloakUtil {
         private static final boolean RUNNING_ON_KEYCLOAK;
 
         static {
-            RUNNING_ON_KEYCLOAK = Resteasy.getProvider().getClass().getSimpleName().equals("Resteasy3Provider");
+            RUNNING_ON_KEYCLOAK = KeycloakSessionUtil.getKeycloakSession().getProvider().getClass().getSimpleName().equals("Restesy3Provider");
         }
     }
 }

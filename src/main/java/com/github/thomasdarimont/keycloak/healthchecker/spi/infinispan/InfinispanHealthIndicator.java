@@ -75,7 +75,7 @@ public class InfinispanHealthIndicator extends AbstractHealthIndicator {
         }
 
         // Manual lookup via Arc for Keycloak.X
-        return Arc.container().instance(CacheManagerFactory.class).get().getOrCreate();
+        return Arc.container().instance(CacheManagerFactory.class).get()
     }
 
     protected KeycloakHealthStatus determineClusterHealth(ClusterHealth clusterHealth) {
