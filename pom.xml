@@ -20,7 +20,7 @@
 
         <keycloak.version>${env.KEYCLOAK_VERSION}</keycloak.version>
         <keycloak.versionedArtifactName>keycloak-${keycloak.version}</keycloak.versionedArtifactName>
-        <infinispan.version>14.0.27.Final</infinispan.version>
+        <infinispan.version>15.0.5.Final</infinispan.version>
         <cdi-api.version>2.0.2</cdi-api.version>
         <quarkus.version>3.8.5</quarkus.version>
     </properties>
