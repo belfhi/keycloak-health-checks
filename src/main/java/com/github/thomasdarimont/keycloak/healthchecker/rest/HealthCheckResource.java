@@ -1,6 +1,5 @@
 package com.github.thomasdarimont.keycloak.healthchecker.rest;
 
-
 import com.github.thomasdarimont.keycloak.healthchecker.model.AggregatedHealthStatus;
 import com.github.thomasdarimont.keycloak.healthchecker.model.HealthStatus;
 import com.github.thomasdarimont.keycloak.healthchecker.spi.GuardedHealthIndicator;
